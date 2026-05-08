@@ -5,7 +5,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 # ⚠️ ВСТАВЬ СВОЙ ТОКЕН СЮДА
-TOKEN = "ВСТАВЬ_ТОКЕН_СЮДА"
+TOKEN = "8620755126:AAFid4yZw6ZIVkAsl16kZDaB59gu69vjZoA"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
