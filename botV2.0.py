@@ -9,7 +9,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
 # ——— НАСТРОЙКИ ———
-TOKEN = os.getenv("BOT_TOKEN", "8620755126:AAFid4yZw6ZIVkAsl16kZDaB59gu69vjZoA")
+TOKEN = os.getenv("BOT_TOKEN", "8620755126:AAHO4JEBWuJgFAsFsLOyZMfHRl8iFdUwEhY")
 ADMIN_ID = 6065524701
 
 bot = Bot(token=TOKEN)
