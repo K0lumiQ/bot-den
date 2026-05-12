@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: tg-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false          # вставишь вручную в Render Dashboard
+      - key: ADMIN_ID
+        sync: false          # вставишь вручную в Render Dashboard
+      - key: WEBHOOK_HOST
+        sync: false          # вставишь вручную: https://tg-bot.onrender.com
+      - key: REDIS_URL
+        fromService:
+          type: redis
+          name: tg-bot-redis
+          property: connectionString
+      - key: PORT
+        value: "8080"
+
+  - type: redis
+    name: tg-bot-redis
+    plan: free
+    maxmemoryPolicy: allkeys-lru
